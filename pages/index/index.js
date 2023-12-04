@@ -16,11 +16,8 @@ Page({
   data: {
     R: 0,
     temperature: "获取中..",
-    weight: "获取中..",
-    mode: "获取中..",
-    frequency: "获取中..",
-    amount: "获取中..",
-    disinfection: "获取中..",
+    smoke: "获取中..",
+    hum: "获取中.."
   },
 
   publish() {
@@ -67,7 +64,7 @@ Page({
     }
     if (app.globalData.client) {
       console.log("mqttconnect ok");
-      app.globalData.client.subscribe("testtopic/QBXOISO3MD3/FFDKR342");
+      app.globalData.client.subscribe("mqttx_defc709a001/001/smarthome");
     }
     app.globalData.client.on("message", (topic, payload) => {
       console.log(`收到消息 - Topic: ${topic}，Payload: ${payload}`);
@@ -75,12 +72,9 @@ Page({
       try {
         var data = JSON.parse(payload);
         this.setData({
-          temperature: data.temperature + "℃",
-          weight: data.weight + "g",
-          mode: data.mode == 1 ? "休眠" : "活动",
-          frequency: data.frequency + "次/天",
-          amount: data.amount + "g",
-          disinfection: data.disinfection == 1 ? "开启" : "关闭",
+          temperature: data.tem + "℃",
+          smoke: data.smoke + "%",
+          hum: data.hum + "%",
         });
       } catch (error) {
         console.log("json解析错误");

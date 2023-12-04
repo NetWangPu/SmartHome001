@@ -40,10 +40,10 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
+  "appid": "wxc234374fd8b23321",
   "libVersion": "2.19.4",
   "packOptions": {
     "ignore": [],
     "include": []
-  },
-  "appid": "wxc234374fd8b23321"
+  }
 }

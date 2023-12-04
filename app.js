@@ -19,8 +19,8 @@ App({
     host: "broker.emqx.io:8084",//连接的服务器域名地址
     username: "",//连接的用户名
     password: "",//连接的密码
-    subTopic: "testtopic/QBXOISO3MD3/FFDKR342",//订阅的Topic 
-    pubTopic: "testtopic/QBXOISO3MD3/FFDKR342",//发布信息的Topic
+    subTopic: "mqttx_defc709a001/001/smarthome",//订阅的Topic 
+    pubTopic: "mqttx_defc709a001/001/smarthome",//发布信息的Topic
     pubMsg: "Hello World",//发布的信息
     receivedMsg: "",//收到的信息
     currMsg: "",//当前信息

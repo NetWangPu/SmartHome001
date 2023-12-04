@@ -1,22 +1,8 @@
-<!-- <view class="title_top">基于单片机的乌龟投喂器</view> -->
-<view class="title_top">实时状态显示</view>
+<view class="title_top">家庭实时状态显示</view>
 <view class = "mode_main">
-  <view class="mode_app" style="background-color: aqua;">温度:{{temperature}}</view>
-  <view class="mode_app" style="background-color: rgb(185, 232, 232);">重量:{{weight}}</view>
-</view>
-<view class = "mode_main">
-  <view class="mode_app" style="background-color: rgb(197, 112, 221)116, 40, 137);">投食频率:{{frequency}}</view>
-  <view class="mode_app" style="background-color: rgb(148, 105, 146);">每次投食量:{{amount}}</view>
-</view>
-
-<view class = "mode_main">
-  <view class="mode_app" style="background-color: rgb(255, 234, 0);">模式:{{mode}}</view>
-  <view class="mode_app" style="background-color: rgb(255, 0, 85);">紫外线杀菌灯:{{disinfection}}</view>
-</view>
-<view class="title_top">远程控制</view>
-<view class="section section_gap">
-  <text class="section__title">设置消毒杀菌次数(次/天)【设置为0则表示关】</text>
-  <view class="body-view">
-    <slider bindchange="sliderRchange" min="0" max="8" show-value />
-  </view>
+  <view class="mode_app" style="background-color: rgb(0, 233, 233);">温度:{{temperature}}</view>
+  <view class="mode_app" style="background-color: rgb(232, 185, 220);">湿度:{{hum}}</view>
+  <view class="mode_app" style="background-color: rgb(189, 232, 185);">烟雾浓度:{{smoke}}</view>
+  <!-- 烟雾浓度大于50时，会将烟雾浓度显示为红色，否则为黑色 -->
+  <view class="mode_app" style="background-color: rgb(185, 196, 232)lor:{{smoke>50?'red':'black'}};">火灾预警:{{smoke>50?'有火灾':'无火灾'}}</view>
 </view>
